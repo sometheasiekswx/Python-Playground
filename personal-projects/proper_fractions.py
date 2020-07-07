@@ -1,23 +1,63 @@
 from fractions import Fraction
+import sys
 
 
-def proper_fraction(dec):
-    sign = '-' if dec < 0 else ''
-    frac = Fraction(abs(dec)).limit_denominator()
+def get_measurement_number(ingredient):
+    '''
+    Return number from ingredient. 
+        get_measurement_number('1T Korean Chilli Paste') returns 1
+    '''
 
-    whole = frac.numerator // frac.denominator
-    numerator = frac.numerator % frac.denominator
-    denominator = frac.denominator
+    num = ingredient.split(' ')[0].replace('T', '').replace('t', '')
 
-    if whole == 0:
-        return (f'{sign} {numerator}/{denominator}')
-    if numerator == 0:
-        return (f'{sign}{whole}')
+    return int(num), ingredient.replace(num, '', 1)
 
-    return (f'{sign}{whole} {numerator}/{denominator}')
+
+def proper_fraction(num):
+    '''
+    Convert a number to a proper fraction.
+    '''
+
+    sign = '-' if num < 0 else ''
+    fraction = Fraction(abs(num)).limit_denominator()
+    whole = fraction.numerator // fraction.denominator
+    new_numerator = fraction.numerator % fraction.denominator
+    new_denominator = fraction.denominator
+
+    if whole is 0:
+        return f'{sign}{new_numerator}/{new_denominator}'
+    if new_numerator is 0:
+        return f'{sign}{whole}'
+
+    return f'{sign}{whole} {new_numerator}/{new_denominator}'
 
 
 if __name__ == "__main__":
-    whole_measurements = [1, 5, 2, 1, 4, 1, 4]
-    one_third_measurements = [proper_fraction(i/3) for i in whole_measurements]
-    print(one_third_measurements)
+    # 1T Korean Chilli Paste
+    # 5T Ketchup
+    # 2T Soy sauce
+    # 1T Pepper Flakes
+    # 4T Sugar
+    # 1T Minced Garlic
+    # 4T Starch Sirup
+
+    ingredients = ['1T Korean Chilli Paste', '5T Ketchup', '2T Soy sauce',
+                   '1T Pepper Flakes', '4T Sugar', '1T Minced Garlic', '4T Starch Sirup']
+
+    whole_measurements = []
+    measurements_text = []
+    for ingredient in ingredients:
+        num, text = get_measurement_number(ingredient)
+        whole_measurements.append(num)
+        measurements_text.append(text)
+
+    try:
+        divide_by = int(sys.argv[1])
+    except IndexError:
+        divide_by = 3
+
+    new_measurements = [proper_fraction(i/divide_by)
+                        for i in whole_measurements]
+
+    for num, text in zip(new_measurements, measurements_text):
+        print(f'{num}{text}')

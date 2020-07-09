@@ -11,6 +11,12 @@ To learn, experiment, and explore Python.
 | python-for-data-science-essential-training-part-1/ | [Python for Data Science Essential Training Part 1](https://www.linkedin.com/learning/python-for-data-science-essential-training-part-1) |   ✅   |
 | python-for-data-science-essential-training-part-2/ | [Python for Data Science Essential Training Part 2](https://www.linkedin.com/learning/python-for-data-science-essential-training-part-2) |   🚧   |
 
+## Legend
+
+- ✅: Complete
+- 🚧: In progress
+- ❌: Failed
+
 ## Note
 
 - When editing this readme, zoom out to view the ##Folder section

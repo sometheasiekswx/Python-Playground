@@ -1,9 +1,6 @@
-fun = set(['life', 'food', 'death', 'games', 'songs',
-           'programming', 'learning', 'travelling'])
-hard = set(['life', 'death', 'programming',
-            'learning', 'social events', 'hell', 'tom jerry', 'somethea siek'])
-easy = set(['death', 'games', 'songs', 'resting',
-            'tom jerry', 'somethea siek'])
+fun = set(['life', 'food', 'death', 'games', 'songs', 'programming', 'learning', 'travelling'])
+hard = set(['life', 'death', 'programming', 'learning', 'social events', 'hell', 'tom jerry', 'somethea siek'])
+easy = set(['death', 'games', 'songs', 'resting', 'tom jerry', 'somethea siek'])
 
 print(f'fun: {fun}')
 print(f'union: {fun.union(hard, easy)}')

@@ -3,7 +3,7 @@ from time import sleep
 
 def poll():
     while(True):
-        polling_file = open('polling.txt', 'r')
+        polling_file = open('polling_2.txt', 'r')
         if 'stop' in polling_file:
             print('Stop polling')
             break

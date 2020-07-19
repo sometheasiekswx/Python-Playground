@@ -13,6 +13,12 @@ To learn, experiment, and explore Python.
 | programming-concepts/                              | General concepts I learn                                                                                                                 |   ✅   |
 | advanced-python/                                   | [Advanced Python](https://www.linkedin.com/learning/advanced-python)                                                                     |   🚧   |
 
+## Legend
+
+- ✅: Complete
+- 🚧: In progress
+- ❌: Failed
+
 ## Note
 
 - When editing this readme, zoom out to view the ##Folder section

@@ -1,5 +1,5 @@
 import os
-import re
+from re import split
 
 
 def main():
@@ -8,15 +8,10 @@ def main():
         files = directories[2]
         for file in files:
             original_path = f'{folder}/{file}'
-            filenames = re.split('_|.py', file)
+            filenames = split('_|.py', file)
             if 'finished' in filenames or 'start' in filenames:
                 new_path = original_path.replace('_finished', '').replace('_start', '')
-                print(new_path, original_path)
-            
-            # if file == 'test2.py':
-            #     print('yes')
-            #     os.rename(original_path, f'{folder}/test.py')
-            #     print(original_path)
+                os.rename(original_path, new_path)
 
 
 if __name__ == '__main__':

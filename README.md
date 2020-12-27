@@ -12,7 +12,8 @@ To learn, experiment, and explore Python.
 | data-science-2/       | [Python for Data Science Essential Training Part 2](https://bit.ly/33EQZ7y) |   ✅   |
 | programming-concepts/ | General concepts learnt                                                     |   ✅   |
 | advanced-python/      | [Advanced Python](https://www.linkedin.com/learning/advanced-python)        |   ✅   |
-| predictive-analytics/ | [Python: Working with Predictive Analytics](https://bit.ly/34ECwYr)         |   🚧   |
+| predictive-analytics/ | [Python: Working with Predictive Analytics](https://bit.ly/34ECwYr)         |   ✅   |
+| predictive-analytics/ | [Python: Working with Predictive Analytics](https://bit.ly/34ECwYr)         |   ✅   |
 
 ## Legend
 
